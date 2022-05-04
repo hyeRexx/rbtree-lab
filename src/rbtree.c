@@ -345,12 +345,13 @@ int rbtree_erase(rbtree *t, node_t *p) {  // TODO: implement erase
   node_t *pNode = p;
   node_t *pExtra;
   color_t originColor = pNode->color;
-
-  // case : 자식이 하나인 경우
-  if (p->left == t->nil) {
+  햐
+      // case : 자식이 하나인 경우
+      if (p->left == t->nil) {
     pExtra = p->right;
     rbtree_transplant(t, p, p->right);
-  } else if (p->right == t->nil) {
+  }
+  else if (p->right == t->nil) {
     pExtra = p->left;
     rbtree_transplant(t, p, p->left);
   }
